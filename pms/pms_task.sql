@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `pms_tasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `code` text NOT NULL,
+  `level` int(11) NOT NULL,
+  `status` varchar(20) NOT NULL,
+  `start` bigint(20) NOT NULL,
+  `duration` int(11) NOT NULL,
+  `end` bigint(20) NOT NULL,
+  `sim` tinyint(1) NOT NULL,
+  `eim` tinyint(1) NOT NULL,
+  `depends` varchar(20) NOT NULL,
+  `description` text NOT NULL,
+  `progress` int(11) NOT NULL,
+  `use_yn` varchar(1) NOT NULL DEFAULT 'Y',
+  `sort` varchar(20) NOT NULL,
+  `pj` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
